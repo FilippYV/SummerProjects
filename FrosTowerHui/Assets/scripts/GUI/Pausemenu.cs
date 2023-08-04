@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,6 +13,8 @@ public class Pausemenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
 
+
+    public GameObject MainCam;
     public GameObject pauseMenuUI;
     public GameObject settingsMenuUI;
     /// <summary>
@@ -26,11 +29,11 @@ public class Pausemenu : MonoBehaviour
     /// </summary>
     public void Pause()
     {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible= true;
-        pauseMenuUI.SetActive(true);
-        Time.timeScale = 0f;
-        GameIsPaused= true;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            pauseMenuUI.SetActive(true);
+            Time.timeScale = 0f;
+            GameIsPaused = true;
     }
     /// <summary>
     /// по повторному нажатию esc или нажатию по кнопке resume продолжает игру
@@ -47,15 +50,18 @@ public class Pausemenu : MonoBehaviour
     /// </summary>
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (MainCam.activeSelf)
         {
-            if(GameIsPaused)
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                Resume();
-            }
-            else
-            {
-                Pause();
+                if (GameIsPaused)
+                {
+                    Resume();
+                }
+                else
+                {
+                    Pause();
+                }
             }
         }
     }
