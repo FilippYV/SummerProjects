@@ -17,6 +17,8 @@ public class Pausemenu : MonoBehaviour
     public GameObject MainCam;
     public GameObject pauseMenuUI;
     public GameObject settingsMenuUI;
+    public GameObject GameUi;
+
     /// <summary>
     /// Выход в главное меню
     /// </summary>
@@ -32,6 +34,7 @@ public class Pausemenu : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             pauseMenuUI.SetActive(true);
+            GameUi.SetActive(false);
             Time.timeScale = 0f;
             GameIsPaused = true;
     }
@@ -42,6 +45,7 @@ public class Pausemenu : MonoBehaviour
     {
         pauseMenuUI.SetActive(false);
         settingsMenuUI.SetActive(false);
+        GameUi.SetActive(true);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }

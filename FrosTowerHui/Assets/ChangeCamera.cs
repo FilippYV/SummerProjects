@@ -6,6 +6,8 @@ using UnityEngine;
 public class ChangeCamera : MonoBehaviour
 {
 
+    public int stateId;
+
     public GameObject BaseCam;
     public GameObject StratCam;
     public GameObject TempCam;
@@ -21,6 +23,7 @@ public class ChangeCamera : MonoBehaviour
         ResCam.SetActive(false);
         DefCam.SetActive(false);
         HordCam.SetActive(false);
+        stateId = 0;
     }
     void Update()
     {
@@ -29,7 +32,7 @@ public class ChangeCamera : MonoBehaviour
 
     public void ExitAllViewLayers()
     {
-        if (Input.GetKey(KeyCode.Escape))
+        if (Input.GetKey(KeyCode.Escape) & stateId !=0)
         {
             BaseCam.SetActive(true);
             StratCam.SetActive(false);
@@ -37,8 +40,25 @@ public class ChangeCamera : MonoBehaviour
             ResCam.SetActive(false);
             DefCam.SetActive(false);
             HordCam.SetActive(false);
+            stateId = 0;
         }
     }
+
+    public void ExitAllViewLayersOnButton()
+    {
+        if (stateId != 0)
+        {
+            BaseCam.SetActive(true);
+            StratCam.SetActive(false);
+            TempCam.SetActive(false);
+            ResCam.SetActive(false);
+            DefCam.SetActive(false);
+            HordCam.SetActive(false);
+            stateId = 0;
+        }
+    }
+
+
     public void SetStratCamActive(bool stratButton)
     {
         if (stratButton)
@@ -49,6 +69,7 @@ public class ChangeCamera : MonoBehaviour
             ResCam.SetActive(false);
             DefCam.SetActive(false);
             HordCam.SetActive(false);
+
         }
     }
 
@@ -63,6 +84,7 @@ public class ChangeCamera : MonoBehaviour
             ResCam.SetActive(false);
             DefCam.SetActive(false);
             HordCam.SetActive(false);
+            stateId = 2;
         }
     }
 
