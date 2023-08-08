@@ -69,6 +69,7 @@ public class ChangeCamera : MonoBehaviour
             ResCam.SetActive(false);
             DefCam.SetActive(false);
             HordCam.SetActive(false);
+            stateId = 1;
 
         }
     }
@@ -99,6 +100,7 @@ public class ChangeCamera : MonoBehaviour
             ResCam.SetActive(true);
             DefCam.SetActive(false);
             HordCam.SetActive(false);
+            stateId = 3;
         }
     }
 
@@ -113,6 +115,7 @@ public class ChangeCamera : MonoBehaviour
             ResCam.SetActive(false);
             DefCam.SetActive(true);
             HordCam.SetActive(false);
+            stateId = 4;
         }
     }
 
@@ -127,6 +130,7 @@ public class ChangeCamera : MonoBehaviour
             ResCam.SetActive(false);
             DefCam.SetActive(false);
             HordCam.SetActive(true);
+            stateId = 5;
         }
     }
 

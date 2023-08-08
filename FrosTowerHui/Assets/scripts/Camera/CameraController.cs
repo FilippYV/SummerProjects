@@ -10,7 +10,11 @@ public class CameraController : MonoBehaviour
 {
     //public List<Transform> cameraTransform;
     public Transform cameraTransform;
+    public Transform cameraStratTransform;
     public Transform cameraTempTransform;
+    public Transform cameraResTransform;
+    public Transform cameraDefTransform;
+    public Transform cameraHordTransform;
 
     [SerializeField] private float _movementSpeed;
     [SerializeField] private float _movementTime;
@@ -39,6 +43,11 @@ public class CameraController : MonoBehaviour
         _newRotation = transform.rotation;
         _newZoom = cameraTransform.localPosition;
         _newZoom = cameraTempTransform.localPosition;
+        _newZoom = cameraStratTransform.localPosition;
+        _newZoom = cameraResTransform.localPosition;
+        _newZoom = cameraDefTransform.localPosition;
+        _newZoom = cameraHordTransform.localPosition;
+
     }
 
     void Update()
@@ -181,7 +190,11 @@ public class CameraController : MonoBehaviour
 
 
         cameraTransform.localPosition = Vector3.Lerp(cameraTransform.localPosition, _newZoom, Time.deltaTime * _movementTime);
+        cameraStratTransform.localPosition = Vector3.Lerp(cameraTransform.localPosition, _newZoom, Time.deltaTime * _movementTime);
         cameraTempTransform.localPosition = Vector3.Lerp(cameraTransform.localPosition, _newZoom, Time.deltaTime * _movementTime);
+        cameraResTransform.localPosition = Vector3.Lerp(cameraTransform.localPosition, _newZoom, Time.deltaTime * _movementTime);
+        cameraDefTransform.localPosition = Vector3.Lerp(cameraTransform.localPosition, _newZoom, Time.deltaTime * _movementTime);
+        cameraHordTransform.localPosition = Vector3.Lerp(cameraTransform.localPosition, _newZoom, Time.deltaTime * _movementTime);
         transform.position = Vector3.Lerp(transform.position, _newPosition, Time.deltaTime * _movementTime);
         transform.rotation = Quaternion.Lerp(transform.rotation, _newRotation, Time.deltaTime * _movementTime);
     }
