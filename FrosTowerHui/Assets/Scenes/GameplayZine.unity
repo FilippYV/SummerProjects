@@ -2011,6 +2011,18 @@ PrefabInstance:
       propertyPath: MusicaudioMixer
       value: 
       objectReference: {fileID: 24100000, guid: f4ac4ba934bc6b445921ca4e419366fe, type: 2}
+    - target: {fileID: 948981648976384045, guid: 5416fc4083b7821439d8c41d41d2444a, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 948981648976384045, guid: 5416fc4083b7821439d8c41d41d2444a, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 2560
+      objectReference: {fileID: 0}
+    - target: {fileID: 948981648976384045, guid: 5416fc4083b7821439d8c41d41d2444a, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1440
+      objectReference: {fileID: 0}
     - target: {fileID: 948981648976384046, guid: 5416fc4083b7821439d8c41d41d2444a, type: 3}
       propertyPath: GameUi
       value: 
@@ -2102,6 +2114,22 @@ PrefabInstance:
     - target: {fileID: 948981648976384047, guid: 5416fc4083b7821439d8c41d41d2444a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 948981649392172227, guid: 5416fc4083b7821439d8c41d41d2444a, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 948981649567293549, guid: 5416fc4083b7821439d8c41d41d2444a, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 948981649576665297, guid: 5416fc4083b7821439d8c41d41d2444a, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 948981649891466830, guid: 5416fc4083b7821439d8c41d41d2444a, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7693656262301044640, guid: 5416fc4083b7821439d8c41d41d2444a, type: 3}
       propertyPath: m_Name
