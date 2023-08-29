@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class PerlinNoiseGenerator : MonoBehaviour
 {
-    public int width = 256;
-    public int height = 256;
+    public int width = 100;
+    public int height = 100;
 
     public float scale = 20f;
     public float offsetX = 100f;
@@ -18,7 +18,7 @@ public class PerlinNoiseGenerator : MonoBehaviour
 
     void Update()
     {
-        Renderer renderer = GetComponent<Renderer>();
+        Renderer renderer =  GetComponent<Renderer>();
         renderer.material.mainTexture = GenerateTexture();
     }
 
